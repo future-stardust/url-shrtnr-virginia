@@ -1,33 +1,24 @@
-# {Team Name} - URL shortener {🧪}
+# Virginia - URL shortener
 
-This is a template project for "Software testing" course labs. Use it to create your own repo and 
-fulfill/rewrite this document (at least, replace everything in `{...}`).
+This is a template project for "Software testing" course labs.
 
 ## Students group
 
-- {Surname Name (in Ukrainian)} {email}
-- ...
-- {Surname Name (in Ukrainian)} {email}
+- Проценко Андрій | andriy.anatolich@gmail.com
+- Севрук Артем | artem55660120072013@gmail.com
+- Сергєєв Ігор | sergieievigor@gmail.com
+- Андрюшечкіна Діана | diart7189@gmail.com
 
 ## Design document
 
-The [design document]({Place actual link to the design document Google Docs file here}) that
+The [design document](https://docs.google.com/document/d/1gAWzpEh81vb39Ry_k5u8iz_depPqdwQXO6_kp8J9lzA/edit) that
 describes architecture and implementation details of this project.
 
 ### System structure
 
-After the third laboratory assignment groups will switch projects with one another. Because of this,
-all projects have to have the same high-level structure. Also, this is the reason why you should not
-modify project dependencies.
-
-Please remember that the main goal of the course is **testing** and everything else is just an 
-implementation harness.
-
 There are four modules:
 - `auth` **authentication module** - creates new users, authenticates existing ones
-- `bigtable` - **big table** - a key-value persistence storage (please, pay attention that you should implement it by
-  yourself. It means that it is not allowed to use data bases, another key-value storages 
-  implementation, etc)
+- `data-store` - **data-store** - a key-value persistence storage
 - `logic` - **business logic** - logic of URL shortening
 - `rest` - **REST API** - a module that provides a REST API. [Micronaut] framework is already added
   to project dependencies. It simplifies creation of REST API and provides built-in JWT 
