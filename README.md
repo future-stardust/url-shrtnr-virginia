@@ -29,6 +29,7 @@ There are four modules:
 ### Java
 This is a Java project, so you will need an environment with installed [JDK] 15. For installation, 
 you could use:
+- [sdkman] on Linux/MacOS 
 - [AdoptOpenJDK] on Windows
 
 ### IDE  
