@@ -13,7 +13,7 @@ class BigTableImplTest {
     bigTable.put("testKey", "testValue");
     String value = bigTable.get("testKey");
 
-    assertThat(value).isEqualTo("testValue");
+    assertThat(value).isEqualTo("testValues");
   }
 
 }
