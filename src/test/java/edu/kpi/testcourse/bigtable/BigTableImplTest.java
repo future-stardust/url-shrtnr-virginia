@@ -1,5 +1,6 @@
 package edu.kpi.testcourse.bigtable;
 
+import edu.kpi.testcourse.DataStore.BigTableImpl;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
