@@ -1,6 +1,7 @@
 package edu.kpi.testcourse.auth;
 
 /**
+ *  User.
  *  <p>email - unique email</p>
  *  <p>hash of the user password.</p>
  */
@@ -9,7 +10,7 @@ public class User {
   private String hash;
 
   /**
-   *  constructor
+   *  constructor.
    *
    * @param email unique string, email of user
    * @param hash hash of the password

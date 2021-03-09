@@ -1,8 +1,7 @@
-package edu.kpi.testcourse.data_store;
+package edu.kpi.testcourse.store;
 
 import edu.kpi.testcourse.auth.Url;
 import edu.kpi.testcourse.auth.User;
-
 import java.io.File;
 
 class DataStore  {
@@ -20,16 +19,16 @@ class DataStore  {
   public User getUser(String email) {
 
     User user = null;
-    return user;
+    return null;
   }
 
   public boolean addShortUrl(Url url) {
-   return true;
+    return true;
   }
 
   public Url getShortUrl(String alias) {
     Url url = null;
-    return url;
+    return null;
   }
 
   public boolean deleteShortUrl(String alias) {

@@ -3,4 +3,4 @@
  *
  * <p>"Big table" is a key-value store.
  */
-package edu.kpi.testcourse.data_store;
+package edu.kpi.testcourse.store;
