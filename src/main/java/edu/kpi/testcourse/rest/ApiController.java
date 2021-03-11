@@ -19,6 +19,11 @@ import io.micronaut.security.rules.SecurityRule;
 public class ApiController {
 
 
+  @Post(value = "/signup", consumes = MediaType.APPLICATION_JSON)
+  public HttpResponse<Object> signUp(@Body String string) {
+    return HttpResponse.ok();
+  }
+
   @Post(value = "/urls/shorten", consumes = MediaType.APPLICATION_JSON)
   public HttpResponse<Object> shortenUrl(@Body String shortenData) {
     return HttpResponse.ok();
