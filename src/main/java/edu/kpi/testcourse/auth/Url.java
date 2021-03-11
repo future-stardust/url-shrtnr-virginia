@@ -9,7 +9,7 @@ package edu.kpi.testcourse.auth;
 public class Url {
   private String shortUrl;
   private String url;
-  private String user;
+  private User user;
 
   /**
    * Constructor.
@@ -18,7 +18,7 @@ public class Url {
    * @param url full url
    * @param user user that created this shortUrl
    */
-  public Url(String shortUrl, String url, String user) {
+  public Url(String shortUrl, String url, User user) {
     this.shortUrl = shortUrl;
     this.url = url;
     this.user = user;
@@ -32,7 +32,7 @@ public class Url {
     return url;
   }
 
-  public String getUser() {
+  public User getUser() {
     return user;
   }
 }
