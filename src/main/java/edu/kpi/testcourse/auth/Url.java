@@ -1,7 +1,7 @@
 package edu.kpi.testcourse.auth;
 
 /**
- * Stores data about url:
+ *  Url:
  *  <p>shortUrl - unique key, shortened url;</p>
  *  <p>url - full url;</p>
  *  <p>user - email of the user, that created this shortUrl</p>.
@@ -9,16 +9,16 @@ package edu.kpi.testcourse.auth;
 public class Url {
   private String shortUrl;
   private String url;
-  private String user;
+  private User user;
 
   /**
-   * Class constructor with all fields filled.
+   * Constructor.
    *
    * @param shortUrl unique key, short name for the url
    * @param url full url
-   * @param user email of user that created this shortUrl
+   * @param user user that created this shortUrl
    */
-  public Url(String shortUrl, String url, String user) {
+  public Url(String shortUrl, String url, User user) {
     this.shortUrl = shortUrl;
     this.url = url;
     this.user = user;
@@ -32,7 +32,7 @@ public class Url {
     return url;
   }
 
-  public String getUser() {
+  public User getUser() {
     return user;
   }
 }
