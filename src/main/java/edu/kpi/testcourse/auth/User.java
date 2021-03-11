@@ -10,7 +10,7 @@ public class User {
   private String hash;
 
   /**
-   *  constructor.
+   *  Constructor.
    *
    * @param email unique string, email of user
    * @param hash hash of the password
