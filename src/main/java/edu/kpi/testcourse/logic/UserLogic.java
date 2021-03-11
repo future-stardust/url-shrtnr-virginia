@@ -3,21 +3,41 @@ package edu.kpi.testcourse.logic;
 import edu.kpi.testcourse.auth.User;
 import edu.kpi.testcourse.store.DataStore;
 
+/**
+ * UserLogic.
+ */
 public class UserLogic {
   private DataStore store;
 
-  UserLogic() {
+  /**
+   * Constructor.
+   *
+   */
+  public UserLogic() {
     store = new DataStore();
   }
-  public void createUser(){
-//    User user1 = new User("test1@mail.com", "hjhfdks");
-//    store.addUser(user1);
+
+  public void createUser() {
+    User user1 = new User("test1@mail.com", "hjhfdks");
+    store.addUser(user1);
   }
-  public boolean logIn(){
+
+  /**
+   * LogIn.
+   * function deactivation token
+   */
+  public boolean logIn() {
     // generate a token
+    User user1 = new User("test1@mail.com", "hjhfdks");
     return true;
   }
-  public boolean logOut(){
+
+  /**
+   * Logout.
+   * function deactivation token
+   */
+  public boolean logOut() {
+    User user1 = new User("test1@mail.com", "hjhfdks");
     // delete token
     return true;
   }

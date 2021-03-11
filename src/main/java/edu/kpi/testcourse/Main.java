@@ -15,6 +15,9 @@ public class Main {
   private static final Gson gson = new Gson();
   private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
+  /**
+   * Main.
+   */
   public static void main(String[] args) {
     logger.info("Hello world!");
     Micronaut.run(Main.class, args);
