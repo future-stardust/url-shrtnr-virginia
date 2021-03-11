@@ -22,15 +22,7 @@ public class DataStore  {
    * Constructor.
    */
   public DataStore() {
-    User user1 = new User("test1@mail.com", "hjhfdks");
-    //    addUser(user1);
-    //    User user2 = new User("test2@mail.com", "jdfjkjd");
-    //    addUser(user2);
-    Url url1 = new Url("bla.bl", "blablabla.bla", user1);
-    //    Url url2 = new Url("bla1.bl", "blablablablabla.bla", user1);
-    //    addShortUrl(url1);
-    //    addShortUrl(url2);
-    saveToFile();
+
   }
 
   /**
