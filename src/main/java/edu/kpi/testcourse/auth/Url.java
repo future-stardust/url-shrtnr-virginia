@@ -16,7 +16,7 @@ public class Url {
    *
    * @param shortUrl unique key, short name for the url
    * @param url full url
-   * @param user email of user that created this shortUrl
+   * @param user user that created this shortUrl
    */
   public Url(String shortUrl, String url, String user) {
     this.shortUrl = shortUrl;
