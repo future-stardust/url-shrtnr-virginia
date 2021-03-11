@@ -26,7 +26,7 @@ public class ApiController {
 
 
   @Get(value = "/urls", produces = MediaType.APPLICATION_JSON)
-  public String[] getUserUrls() {
+  public String[] getUser() {
     return new String[]{"Url array"};
   }
 
