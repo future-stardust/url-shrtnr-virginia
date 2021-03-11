@@ -4,7 +4,7 @@ import com.nimbusds.jose.shaded.json.JSONArray;
 import com.nimbusds.jose.shaded.json.JSONObject;
 import edu.kpi.testcourse.auth.Url;
 import edu.kpi.testcourse.auth.User;
-import java.io.File;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -22,13 +22,10 @@ public class DataStore  {
     User user2 = new User("test2@mail.com", "jdfjkjd");
     addUser(user2);
     saveToFile();
-
-//    JSONArray company = new JSONArray();
-//    company.add("Company: Facebook");
-//    obj.put("Company List", company);
   }
 
   public boolean addUser(User user) {
+    user.setId(users_list.size());
     JSONObject newUser = new JSONObject();
     newUser.put("id", users_list.size());
     newUser.put("email", user.getUserEmail());
@@ -37,22 +34,21 @@ public class DataStore  {
     return true;
   }
 
-  public User getUser(String email) {
-
-    User user = null;
-    return null;
-  }
-
   public boolean addShortUrl(Url url) {
+    JSONObject newLink = new JSONObject();
+    newLink.put("id", links_list.size());
+    newLink.put("userId", url.getUser().getId());
+    newLink.put("link", url.getUrl());
+    newLink.put("short_link", url.getAlias());
+    links_list.add(newLink);
     return true;
   }
 
-  public Url getShortUrl(String alias) {
-    Url url = null;
-    return null;
+  public String getShortUrl(String url) {
+    return "";
   }
 
-  public boolean deleteShortUrl(String alias) {
+  public boolean deleteShortUrl(String url) {
 
     return true;
   }
