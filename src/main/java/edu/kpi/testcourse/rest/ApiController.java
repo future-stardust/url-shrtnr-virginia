@@ -1,5 +1,9 @@
 package edu.kpi.testcourse.rest;
 
+import edu.kpi.testcourse.Utils;
+import edu.kpi.testcourse.auth.User;
+import edu.kpi.testcourse.logic.UserLogic;
+import edu.kpi.testcourse.store.DataStore;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Body;
@@ -18,9 +22,29 @@ import io.micronaut.security.rules.SecurityRule;
 @Controller
 public class ApiController {
 
+  private UserLogic userLogic = new UserLogic();
 
   @Post(value = "/signup", consumes = MediaType.APPLICATION_JSON)
-  public HttpResponse<Object> signUp(@Body String string) {
+  public HttpResponse<Object> signUp(@Body User user) {
+    boolean success = true;
+    String description = "Account is created";
+    int status = 201;
+    user.setId(user.getId());
+    if("".equals(user.getId())) {
+      success = false;
+      status = 415;
+      description = "Couldn't find a value for parameter 'userID'";
+    } else if (userLogic.userIDExists(user.getId())) {
+      success = false;
+      status = 409;
+      description = "User exists";
+    }
+    else {
+      user.setHash(Utils.generateRandomString(12));
+      userLogic.createUser(user.getUserEmail(), user.getUserHash(), user.getId());
+    }
+
+    String response = Utils.generateAccountResponse(success, description, user.getUserHash());
     return HttpResponse.ok();
   }
 

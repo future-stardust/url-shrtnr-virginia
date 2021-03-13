@@ -17,8 +17,8 @@ public class UserLogic {
     store = new DataStore();
   }
 
-  public void createUser() {
-    User user1 = new User("test1@mail.com", "hjhfdks");
+  public void createUser(String email, String hash, int id) {
+    User user1 = new User(email, hash, id);
     store.addUser(user1);
   }
 
@@ -26,9 +26,9 @@ public class UserLogic {
    * LogIn.
    * function deactivation token
    */
-  public boolean logIn() {
+  public boolean logIn(String email, String hash, int id) {
     // generate a token
-    User user1 = new User("test1@mail.com", "hjhfdks");
+    User user1 = new User(email, hash, id);
     return true;
   }
 
@@ -36,9 +36,15 @@ public class UserLogic {
    * Logout.
    * function deactivation token
    */
-  public boolean logOut() {
-    User user1 = new User("test1@mail.com", "hjhfdks");
+  public boolean logOut(String email, String hash, int id) {
+    User user1 = new User(email, hash, id);
     // delete token
+    return true;
+  }
+
+  public boolean userIDExists(int userID) {
+    //...
+    //...
     return true;
   }
 }
