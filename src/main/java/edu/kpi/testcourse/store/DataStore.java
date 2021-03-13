@@ -46,7 +46,7 @@ public class DataStore  {
   public boolean addShortUrl(Url url) {
     JSONObject newLink = new JSONObject();
     newLink.put("id", linksList.size());
-    newLink.put("userId", url.getUser().getId());
+    newLink.put("userID", url.getUser().getId());
     newLink.put("link", url.getUrl());
     newLink.put("short_link", url.getAlias());
     linksList.add(newLink);
@@ -80,4 +80,6 @@ public class DataStore  {
       return false;
     }
   }
+
+
 }

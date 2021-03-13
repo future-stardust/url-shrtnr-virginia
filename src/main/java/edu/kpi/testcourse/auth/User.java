@@ -8,7 +8,7 @@ package edu.kpi.testcourse.auth;
 public class User {
   private String email;
   private String hash;
-  private int id;
+  private int userID;
 
   /**
    *  Constructor.
@@ -16,9 +16,10 @@ public class User {
    * @param email unique string, email of user
    * @param hash hash of the password
    */
-  public User(String email, String hash) {
+  public User(String email, String hash, int userID) {
     this.email = email;
     this.hash = hash;
+    this.userID = userID;
   }
 
   public String getUserEmail() {
@@ -29,11 +30,15 @@ public class User {
     return hash;
   }
 
-  public void setId(int i) {
-    this.id = i;
+  public void setId(int id) {
+    this.userID = id;
   }
 
   public int getId() {
-    return id;
+    return userID;
+  }
+
+  public void setHash(String hash) {
+    this.hash = hash;
   }
 }
